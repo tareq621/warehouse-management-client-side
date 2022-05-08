@@ -1,19 +1,24 @@
 import React from 'react';
 import { Button, Card, Col, Row } from 'react-bootstrap';
+import './Item.css'
 
 const Item = (props) => {
-    const { name, img, price, Quantity } = props.item;
+    const { name, img, price, quantity, supplierName, description } = props.item;
     return (
         <div>
-            <Card style={{ width: '22rem' }}>
+            <Card className=' card-shadow col-12 col-md-6 col-sm-6' style={{ width: '22rem' }}>
                 <Card.Img variant="top" src={img} />
-                <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
+                <Card.Body className='gy-5'>
+                    <Card.Title>{name}</Card.Title>
+                    <div className='d-flex justify-content-between'>
+                        <p>Price:$ {price}</p>
+                        <p>Quantity: {quantity}</p>
+                    </div>
+                    <h4>Supplier Name: {supplierName}</h4>
                     <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
+                        {description}
                     </Card.Text>
-                    <Button variant="primary">Update</Button>
+                    <Button className='button border-0' variant="primary">Update</Button>
                 </Card.Body>
             </Card>
         </div>

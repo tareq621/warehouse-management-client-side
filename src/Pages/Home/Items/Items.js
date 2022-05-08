@@ -12,11 +12,11 @@ const Items = () => {
     return (
         <div className='container'>
             <div>
-                <h2 className='text-center mt-4'>Items</h2>
+                <h1 className='text-center mt-4 section-title'>Inventory Items</h1>
             </div>
             <div className='items-container'>
                 {
-                    items.map(item => <Item
+                    items.slice(0, 6).map(item => <Item
                         key={item.id}
                         item={item}
                     ></Item>)
