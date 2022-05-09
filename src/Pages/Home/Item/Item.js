@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, Col, Row } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 import './Item.css'
 
 const Item = (props) => {
@@ -9,7 +9,7 @@ const Item = (props) => {
             <Card className=' card-shadow col-12 col-md-6 col-sm-6' style={{ width: '22rem' }}>
                 <Card.Img variant="top" src={img} />
                 <Card.Body className='gy-5'>
-                    <Card.Title>{name}</Card.Title>
+                    <h4>{name}</h4>
                     <div className='d-flex justify-content-between'>
                         <p>Price:$ {price}</p>
                         <p>Quantity: {quantity}</p>

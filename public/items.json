@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Lamborghini",
-        "price": "3500",
+        "price": "5200",
         "quantity": "22",
         "supplierName": "Arif Azad",
         "description": "You should be running on the treadmill the same way you would run outdoors. Try to run with your natural gait, and avoid taking short, choppy strides. If your form feels off.",
@@ -11,7 +11,7 @@
     {
         "id": 2,
         "name": "Ferrari",
-        "price": "3500",
+        "price": "4800",
         "quantity": "15",
         "supplierName": "Arif Azad",
         "description": "You should be running on the treadmill the same way you would run outdoors. Try to run with your natural gait, and avoid taking short, choppy strides. If your form feels off.",
@@ -19,8 +19,8 @@
     },
     {
         "id": 3,
-        "name": "Bayerische Motoren Werke",
-        "price": "3500",
+        "name": "BMW",
+        "price": "3000",
         "quantity": "18",
         "supplierName": "Arif Azad",
         "description": "You should be running on the treadmill the same way you would run outdoors. Try to run with your natural gait, and avoid taking short, choppy strides. If your form feels off.",
@@ -38,7 +38,7 @@
     {
         "id": 5,
         "name": "Bentley",
-        "price": "3500",
+        "price": "4000",
         "quantity": "20",
         "supplierName": "Arif Azad",
         "description": "You should be running on the treadmill the same way you would run outdoors. Try to run with your natural gait, and avoid taking short, choppy strides. If your form feels off.",
@@ -47,7 +47,7 @@
     {
         "id": 6,
         "name": "Bugatti",
-        "price": "3500",
+        "price": "5000",
         "quantity": "13",
         "supplierName": "Arif Azad",
         "description": "You should be running on the treadmill the same way you would run outdoors. Try to run with your natural gait, and avoid taking short, choppy strides. If your form feels off.",
@@ -56,7 +56,7 @@
     {
         "id": 7,
         "name": "Mercedes-Benz",
-        "price": "3500",
+        "price": "4800",
         "quantity": "12",
         "supplierName": "Arif Azad",
         "description": "You should be running on the treadmill the same way you would run outdoors. Try to run with your natural gait, and avoid taking short, choppy strides. If your form feels off.",
@@ -65,7 +65,7 @@
     {
         "id": 8,
         "name": "Rolls-Royce",
-        "price": "3500",
+        "price": "4300",
         "quantity": "27",
         "supplierName": "Arif Azad",
         "description": "You should be running on the treadmill the same way you would run outdoors. Try to run with your natural gait, and avoid taking short, choppy strides. If your form feels off.",
@@ -74,7 +74,7 @@
     {
         "id": 9,
         "name": "Toyota",
-        "price": "4000",
+        "price": "3900",
         "quantity": "21",
         "supplierName": "Arif Azad",
         "description": "You should be running on the treadmill the same way you would run outdoors. Try to run with your natural gait, and avoid taking short, choppy strides. If your form feels off.",
