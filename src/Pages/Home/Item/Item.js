@@ -18,7 +18,7 @@ const Item = (props) => {
                     <Card.Text>
                         {description}
                     </Card.Text>
-                    <Button className='button border-0' variant="primary">Update</Button>
+                    <Button className='button border-0 pe-auto' variant="primary">Update</Button>
                 </Card.Body>
             </Card>
         </div>
