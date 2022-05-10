@@ -1,9 +1,16 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import './Item.css'
 
 const Item = (props) => {
-    const { name, img, price, quantity, supplierName, description } = props.item;
+    const { _id, name, img, price, quantity, supplierName, description } = props.item;
+    const navigate = useNavigate();
+
+    const navigateInventory = id => {
+        navigate(`/item/${id}`)
+    }
+
     return (
         <div>
             <Card className=' card-shadow col-12 col-md-6 col-sm-6' style={{ width: '22rem' }}>
@@ -18,7 +25,7 @@ const Item = (props) => {
                     <Card.Text>
                         {description}
                     </Card.Text>
-                    <Button className='button border-0 pe-auto' variant="primary">Update</Button>
+                    <Button onClick={() => navigateInventory(_id)} className='button border-0 pe-auto' variant="primary">Update</Button>
                 </Card.Body>
             </Card>
         </div>

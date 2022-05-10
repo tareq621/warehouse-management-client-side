@@ -8,7 +8,7 @@ const Banner = () => {
                 <img className='img-fluid' src={banner} alt="" />
             </div>
             <div className='banner-text text-center'>
-                <h2 style={{ 'fontSize': '45px' }} className='fw-bolder text-light'>Welcome to <span className=' color-picker px-1'>Car Ride Pool</span></h2>
+                <h2 style={{ 'fontSize': '45px' }} className='fw-bolder text-light'>Welcome to <span className='rounded color-picker px-1'>Car Ride Pool</span></h2>
             </div>
         </div>
     );

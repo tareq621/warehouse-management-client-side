@@ -22,10 +22,20 @@ const Header = () => {
                     <Navbar.Brand as={Link} to="/" className='fw-bolder'>Care Ride Pool</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse className='text-dark' id="responsive-navbar-nav">
-                        <Nav className="section-name">
-                            <Nav.Link as={Link} to="home" className='text-dark'>HOME</Nav.Link>
-                            <Nav.Link as={Link} to="manageinventories" className='text-dark'>MANAGE INVENTORIES</Nav.Link>
-                            <Nav.Link as={Link} to="blog" className='text-dark'>BLOG</Nav.Link>
+                        <Nav className="section-name font-style">
+
+                            <Nav.Link as={Link} to="home" className='text-dark fw-bold'>HOME</Nav.Link>
+
+                            <Nav.Link as={Link} to="manageitem" className='text-dark fw-bold'>MANAGE ITEM</Nav.Link>
+                            {
+                                !user ?
+                                    <Nav.Link as={Link} to="blog" className='text-dark fw-bold'>BLOG</Nav.Link>
+                                    :
+                                    <>
+                                        <Nav.Link as={Link} to="additem" className='text-dark fw-bold'>ADD ITEM</Nav.Link>
+                                        <Nav.Link as={Link} to="myitem" className='text-dark fw-bold'>MY ITEM</Nav.Link>
+                                    </>
+                            }
                         </Nav>
                         <Nav>
                             <Nav.Link as={Link} to="/signup">

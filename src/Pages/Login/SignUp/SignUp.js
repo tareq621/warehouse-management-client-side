@@ -3,6 +3,7 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
+import Loading from '../../Shared/Loading/Loading';
 
 const SignUp = () => {
     let errorElement;
@@ -22,6 +23,11 @@ const SignUp = () => {
     if (user) {
         navigate('/home')
     }
+
+    if (loading) {
+        return <Loading></Loading>
+    }
+
     if (error) {
         errorElement = <p className='text-danger'>Error:{error.message}</p>
     }
@@ -32,7 +38,6 @@ const SignUp = () => {
         const password = event.target.password.value;
         createUserWithEmailAndPassword(email, password);
     }
-
 
     return (
         <div>

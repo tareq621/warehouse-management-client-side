@@ -1,11 +1,16 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import AddItem from './Pages/AddItem/AddItem';
 import Blog from './Pages/Blog/Blog';
 import Home from './Pages/Home/Home/Home';
+import Inventory from './Pages/Inventories/Inventories';
 import Login from './Pages/Login/Login/Login';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import SignUp from './Pages/Login/SignUp/SignUp';
-import ManageInventory from './Pages/ManageInventory/ManageInventory';
+import ManageItems from './Pages/ManageItems/ManageItems';
+import ManageItem from './Pages/ManageItems/ManageItems';
+import ManageInventory from './Pages/ManageItems/ManageItems';
+import MyItem from './Pages/MyItem/MyItem';
 import Header from './Pages/Shared/Header/Header';
 
 function App() {
@@ -15,12 +20,23 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
-        <Route path='/manageinventories' element={
+        <Route path='/manageitem' element={
           <RequireAuth>
-            <ManageInventory></ManageInventory>
+            <ManageItems></ManageItems>
+          </RequireAuth>
+        }></Route>
+        <Route path='/additem' element={
+          <RequireAuth>
+            <AddItem></AddItem>
+          </RequireAuth>
+        }></Route>
+        <Route path='/myitem' element={
+          <RequireAuth>
+            <MyItem></MyItem>
           </RequireAuth>
         }></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='/item/:itemId' element={<Inventory></Inventory>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
       </Routes>
