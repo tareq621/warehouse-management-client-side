@@ -25,7 +25,7 @@ const Item = (props) => {
                     <Card.Text>
                         {description}
                     </Card.Text>
-                    <Button onClick={() => navigateInventory(_id)} className='button border-0 pe-auto' variant="primary">Update</Button>
+                    <Button onClick={() => navigateInventory(_id)} className='button border-0 pe-auto'>Update</Button>
                 </Card.Body>
             </Card>
         </div>

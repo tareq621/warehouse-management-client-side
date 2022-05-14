@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import Inventory from './Inventory/Inventory';
 
 const Inventories = () => {
     const { itemId } = useParams();
     const [inventories, setInventories] = useState({});
+    const navigate = useNavigate();
+
+    const navigateManageitem = () => {
+        navigate('/manageitem')
+    }
 
     useEffect(() => {
         const url = `http://localhost:5000/item/${itemId}`
@@ -40,6 +45,10 @@ const Inventories = () => {
                                     <tr>
                                         <td className='fw-bold'>Quantity:</td>
                                         <td>{inventories.quantity}</td>
+                                        <td>Sold:2</td>
+                                        <td>
+                                            <Button style={{ backgroundColor: '#E21717' }} className='border-0'>Delivered</Button>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td className='fw-bold'>Supplier</td>
@@ -56,6 +65,9 @@ const Inventories = () => {
                                     <Form.Control className='border-0 border-bottom border-bottom' name='name' type="number" placeholder="stock" />
                                 </Form.Group>
                                 <Button style={{ backgroundColor: '#E21717' }} className='border-0 text-light px-3 ms-4' type="submit">Re-stock</Button>
+                            </div>
+                            <div>
+                                <Button style={{ backgroundColor: '#E21717' }} className='my-5 border-0' onClick={() => navigateManageitem()}>Manage Inventories</Button>
                             </div>
                         </div>
                     </div>
