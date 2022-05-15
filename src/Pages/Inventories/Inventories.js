@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link, useNavigate, useParams } from 'react-router-dom';
-import Inventory from './Inventory/Inventory';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const Inventories = () => {
     const { itemId } = useParams();
     const [inventories, setInventories] = useState({});
+
     const navigate = useNavigate();
 
     const navigateManageitem = () => {
@@ -18,6 +18,8 @@ const Inventories = () => {
             .then(res => res.json())
             .then(data => setInventories(data))
     }, [])
+
+
 
     return (
         <div>
