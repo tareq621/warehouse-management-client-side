@@ -16,7 +16,7 @@ const ManageItem = (props) => {
             <div className="card mb-3 py-2 border-0 rounded">
                 <div className="row g-2">
                     <div className="col-md-4">
-                        <img style={{ width: '200px', height: '150px' }} className='img-fluid rounded-start py-1' src={img} alt="" />
+                        <img className='img-fluid rounded-start py-1' src={img} alt="" />
                     </div>
                     <div className="col-md-8 d-flex">
                         <div className="card-body d-flex justify-content-around align-items-center">
@@ -26,7 +26,7 @@ const ManageItem = (props) => {
                         </div>
                         <div className='d-flex align-items-center'>
                             <div>
-                                <button type="button" className="button border-0 rounded text-light px-2 py-1 me-2">Update</button>
+                                <button type="button" className="button border-0 rounded text-light px-2 py-1 me-2" onClick={navigateInventory}>Update</button>
                             </div>
                             <div>
                                 <button type="button" className="button border-0 rounded text-light px-2 py-1">

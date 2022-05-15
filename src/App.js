@@ -13,6 +13,7 @@ import ManageItem from './Pages/ManageItems/ManageItems';
 import ManageInventory from './Pages/ManageItems/ManageItems';
 import MyItem from './Pages/MyItem/MyItem';
 import Header from './Pages/Shared/Header/Header';
+import NotFound from './Pages/Shared/NotFound/NotFound';
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
         <Route path='/item/:itemId' element={<Inventory></Inventory>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
 
     </div>
