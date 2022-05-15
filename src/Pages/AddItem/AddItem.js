@@ -1,11 +1,15 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import { Button, Col, FloatingLabel, Form, Row } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import useItems from '../../Hooks/useItems';
 
-const AddItem = () => {
+const AddItem = (props) => {
     const { register, handleSubmit } = useForm();
+    const [user] = useAuthState(auth);
 
-    const onSubmit = data => {
+    const onSubmit = (event, data) => {
         console.log(data);
         const url = `http://localhost:5000/item`;
         fetch(url, {
@@ -18,22 +22,23 @@ const AddItem = () => {
             .then(res => res.json())
             .then(result => {
                 console.log(result);
+
             })
     };
 
+
     return (
         <div className='mx-auto w-50'>
-            <h1 className='fw-bold mt-2 text-center section-title'>Add Product</h1>
             <form onSubmit={handleSubmit(onSubmit)} className='container mt-4'>
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="formGridName">
                         <Form.Label>Name</Form.Label>
-                        <Form.Control {...register("userName")} placeholder="" />
+                        <Form.Control {...register("userName")} value={user.displayName} placeholder="" required readOnly disabled />
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Email</Form.Label>
-                        <Form.Control {...register("email")} placeholder="" />
+                        <Form.Control {...register("email")} value={user.email} readOnly required disabled placeholder="" />
                     </Form.Group>
                 </Row>
                 <Row className="mb-3">

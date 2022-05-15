@@ -2,14 +2,33 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import useItems from '../../Hooks/useItems';
 
 const ManageItem = (props) => {
     const navigate = useNavigate();
-
-    const { _id, name, img, price, quantity, supplierName, description } = props.item;
+    const [items, setItems] = useItems();
+    const { _id, name, img, price, quantity } = props.item;
 
     const navigateInventory = () => {
         navigate(`/item/${_id}`)
+    }
+
+
+    const handleDelete = id => {
+        const proceed = window.confirm('Are you sure?');
+        if (proceed) {
+            const url = `http://localhost:5000/item/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    const remaining = items.filter(item => item._id !== id);
+                    setItems(remaining)
+
+                })
+        }
     }
     return (
         <div className='container '>
@@ -29,7 +48,7 @@ const ManageItem = (props) => {
                                 <button type="button" className="button border-0 rounded text-light px-2 py-1 me-2" onClick={navigateInventory}>Update</button>
                             </div>
                             <div>
-                                <button type="button" className="button border-0 rounded text-light px-2 py-1">
+                                <button onClick={() => handleDelete(_id)} type="button" className="button border-0 rounded text-light px-2 py-1">
                                     <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
                                 </button>
                             </div>

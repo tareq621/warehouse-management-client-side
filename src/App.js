@@ -9,8 +9,6 @@ import Login from './Pages/Login/Login/Login';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import SignUp from './Pages/Login/SignUp/SignUp';
 import ManageItems from './Pages/ManageItems/ManageItems';
-import ManageItem from './Pages/ManageItems/ManageItems';
-import ManageInventory from './Pages/ManageItems/ManageItems';
 import MyItem from './Pages/MyItem/MyItem';
 import Header from './Pages/Shared/Header/Header';
 import NotFound from './Pages/Shared/NotFound/NotFound';
