@@ -8,7 +8,7 @@ import useItems from '../../Hooks/useItems';
 const AddItem = (props) => {
     const { register, handleSubmit } = useForm();
     const [user] = useAuthState(auth);
-
+    console.log(user);
     const onSubmit = (event, data) => {
         console.log(data);
         const url = `http://localhost:5000/item`;
