@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -18,7 +19,6 @@ const Inventories = () => {
             .then(res => res.json())
             .then(data => setInventories(data))
     }, [])
-
 
 
     return (
@@ -46,7 +46,7 @@ const Inventories = () => {
                                     </tr>
                                     <tr>
                                         <td className='fw-bold'>Quantity:</td>
-                                        <td>{inventories.quantity}</td>
+                                        <td >{inventories.quantity}</td>
                                         <td>Sold:2</td>
                                         <td>
                                             <Button style={{ backgroundColor: '#E21717' }} className='border-0'>Delivered</Button>

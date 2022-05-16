@@ -2,3 +2,15 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+
+@media only screen and (max-width:576px) {
+    .reviews-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:992px) {
+    .reviews-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

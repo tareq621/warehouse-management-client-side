@@ -8,7 +8,6 @@ import useItems from '../../Hooks/useItems';
 const AddItem = (props) => {
     const { register, handleSubmit } = useForm();
     const [user] = useAuthState(auth);
-    console.log(user);
     const onSubmit = (event, data) => {
         console.log(data);
         const url = `http://localhost:5000/item`;
@@ -28,8 +27,8 @@ const AddItem = (props) => {
 
 
     return (
-        <div className='mx-auto w-50'>
-            <form onSubmit={handleSubmit(onSubmit)} className='container mt-4'>
+        <div className='mx-auto w-50 '>
+            <form onSubmit={handleSubmit(onSubmit)} className='container mt-4 '>
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="formGridName">
                         <Form.Label>Name</Form.Label>
