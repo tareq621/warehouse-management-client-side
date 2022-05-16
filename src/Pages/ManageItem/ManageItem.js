@@ -17,7 +17,7 @@ const ManageItem = (props) => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/item/${id}`;
+            const url = `https://whispering-tundra-24580.herokuapp.com/item/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

@@ -11,7 +11,7 @@ const AddItem = (props) => {
     console.log(user);
     const onSubmit = (data) => {
         console.log(data);
-        const url = `http://localhost:5000/item`;
+        const url = `https://whispering-tundra-24580.herokuapp.com/item`;
         fetch(url, {
             method: 'POST',
             headers: {

@@ -14,7 +14,7 @@ const Inventories = () => {
     }
 
     useEffect(() => {
-        const url = `http://localhost:5000/item/${itemId}`
+        const url = `https://whispering-tundra-24580.herokuapp.com/item/${itemId}`
         fetch(url)
             .then(res => res.json())
             .then(data => setInventories(data))
