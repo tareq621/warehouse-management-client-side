@@ -7,7 +7,7 @@ import { Card } from 'react-bootstrap';
 const Review = (props) => {
     const { title, name, job, description } = props.review;
     return (
-        <div className='container text-center'>
+        <div className='container text-center mb-4'>
             <Card style={{ width: '18rem' }} className="border-0 container review-shadow">
                 <Card.Body>
                     <Card.Title className='fw-bold'>{title}</Card.Title>
