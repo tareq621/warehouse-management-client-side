@@ -56,9 +56,6 @@ const SignUp = () => {
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Control className='border-0 border-bottom' name='password' type="password" placeholder="Password" required />
                 </Form.Group>
-                <Form.Group className="mb-3 mt-4" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="I Agree All Statements in Terms And Condition" />
-                </Form.Group>
                 {errorElement}
                 <Button style={{ backgroundColor: '#E21717' }} className='border-0 w-100 mx-auto' type="submit">
                     Login
