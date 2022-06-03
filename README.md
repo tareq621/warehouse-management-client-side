@@ -7,7 +7,7 @@ https://car-ride-pool.web.app
 
 * Manage Inventory
 * Brand
-* Reviews 
+* Review 
 * Private route
 * Reset Password
 * Add a new item 
